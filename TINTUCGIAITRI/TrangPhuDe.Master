@@ -1,0 +1,64 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="TrangPhuDe.master.cs" Inherits="TINTUCGIAITRI.TrangPhuDe" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Quản Lý</title>
+    <style>
+	   body{
+           
+             margin:auto;
+             text-align:center;
+             line-height: 1.6;
+            font-family: "UTMAvo";
+        }
+        .tieude{
+            color:#187a1d;
+            font-size:30px;
+            
+            
+        }
+        .anh{
+            width:150px;
+            height:150px;
+            border: 2px solid #808080;
+            border-radius:40%;
+        }
+        .hihi{
+             margin:auto;
+        }
+         .Them {
+              margin:auto;
+         }
+     </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <br />
+              <b class="tieude" >Quyền Truy Cập Quản Lý</b>
+            <div style="display:flex">
+                <div style="width:10%">
+                   
+
+                </div>
+                 <div style="width:60%">
+
+                </div>
+                 <div style="width:30%">
+                               <a href="DangNhap.aspx" style="text-decoration:none">Đăng Xuất</a>&nbsp;&nbsp;<img  src="Picture/taikhoann.PNG"  width="20" height="20" style="border-radius:50%"/> <asp:Label ID="QLL" runat="server" Text="" CssClass="tkk"></asp:Label>
+
+                </div>
+            </div>
+   
+
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

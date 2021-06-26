@@ -1,0 +1,171 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="TrangNhanVien.master.cs" Inherits="TINTUCGIAITRI.TrangNhanVien" %>
+
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Quản Lý</title>
+    <style>
+	   body{
+           
+             margin:auto;
+             text-align:center;
+             line-height: 1.6;
+            font-family: "UTMAvo";
+        }
+        .tieude{
+            color:#187a1d;
+            font-size:30px;
+            
+            
+        }
+        .anh{
+            width:150px;
+            height:150px;
+            border: 2px solid #808080;
+            border-radius:40%;
+        }
+        .hihi{
+             margin:auto;
+        }
+         .Them {
+              margin:auto;
+         }
+
+    .menu ul li{
+    list-style-type: none;
+    height: 40px;
+     width: 60px;
+    line-height: 40px;
+    width: 470px;
+    float: left;
+    text-align: center;
+      background-color: silver;
+       }
+.menu ul li a{
+    text-decoration: none;
+    font-weight: bold;
+    color:#1b6de0;
+    display: block;
+    font-size:24px;
+}
+ul li:hover{
+    background-color: white;
+}
+
+li a.active {
+  background-color: white;
+ 
+}
+ul li ul li{
+    display: none;
+     margin-left:-40px;
+
+}
+ul li:hover ul li{
+    display: block;
+     position:relative;
+   
+}
+ .menu{
+      width:1000px;
+     margin:auto;
+
+     
+         }
+ .thongbao{
+    position:absolute;
+     color:red;
+     text-shadow: 3px 5px 3px #ff6a00;
+     z-index:1000;
+    
+  background:#e69ecf;
+ width:40px;
+ border-radius:50%;
+  font-weight: bold;
+    transition: all 0.8s;
+                -webkit-animation: my 2000ms infinite;
+
+ }
+  /*CHữ nhấp nháy*/
+            @-webkit-keyframes my {
+                0% {
+                    color: red;
+                }
+
+                50% {
+                    background-color: white;
+                    color: #e60808;
+                   transform: scaleY(1.2);
+                }
+
+                100% {
+                    background-color: #ee3636;
+                    color: #15f327;
+                }
+            }
+
+
+            
+
+         
+ 
+
+     </style>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <br />
+              <b class="tieude" >Quyền Truy Cập Nhân Viên</b>
+            <div style="display:flex">
+                <div style="width:10%">
+                   
+
+                </div>
+                 <div style="width:60%">
+
+                </div>
+                 <div style="width:30%">
+                               <a href="DangNhap.aspx" style="text-decoration:none">Đăng Xuất</a>&nbsp;&nbsp;<img  src="Picture/taikhoann.PNG"  width="20" height="20" style="border-radius:50%"/> <asp:Label ID="QLL" runat="server" Text="" CssClass="tkk"></asp:Label>
+
+                </div>
+            </div>
+    <div class="menu">
+            <ul>
+                
+               
+                 <li> <a href="GiaoDienNhanVien.aspx">Quản Lý Bài Viết</a>
+                    <ul>
+                       
+                    </ul>
+                </li>
+                <li> <a href="BaiVietCanDuyet.aspx">Bài Viết Cần Duyệt &nbsp;&nbsp;&nbsp;&nbsp; <b>
+            <asp:Label ID="ThongBao" runat="server" Text="" CssClass="thongbao">
+               
+            </asp:Label>
+                </b></a> 
+                    <ul>
+                       
+                    </ul>
+                </li>
+                        
+               
+               
+            </ul>
+            <br />
+            
+        </div>
+            
+
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
